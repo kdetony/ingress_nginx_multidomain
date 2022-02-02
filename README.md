@@ -37,7 +37,7 @@ git clone https://github.com/kubernetes/ingress-nginx.git
 > Agregamos al archivo deploy.yml  **externalIPs** debajo de **NodePort**
 
 
-**path: ./ingress-nginx/deploy/static/provider/baremetal/deploy.yml **
+**path: ./ingress-nginx/deploy/static/provider/baremetal/deploy.yml**
 
 > externalIPS:
 > - IP_PUBLICA
