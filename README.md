@@ -1,5 +1,5 @@
 # Nginx como ingress controller con Kubernetes
-Repo nginx nigress controller
+Instalacion de Nginx como Ingress Controller en Kubernetes para 2 dominios.
 
 Instalamos k0s
 ===
