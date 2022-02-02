@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-kakaroto
+  labels:
+    app: kakaroto
+spec:
+  selector:
+    matchLabels:
+      app: kakaroto
+  template:
+    metadata:
+      labels:
+        app: kakaroto
+    spec:
+      containers:
+      - image: kdetony/imgnodeweb:0.1
+        name: cont-kakaroto
+        ports:
+        - containerPort: 8080
+          name: cont-kakaroto
+        volumeMounts:
+        - name: data-kakaroto
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: data-kakaroto
+        persistentVolumeClaim:
+          claimName:  pvc-kakaroto
+

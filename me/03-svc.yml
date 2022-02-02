@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-me
+  labels:
+    app: me
+spec:
+  type: NodePort
+  ports:
+  - port: 8090
+    protocol: TCP
+    nodePort: 30891
+    targetPort: 8090
+  selector:
+    app: me
+

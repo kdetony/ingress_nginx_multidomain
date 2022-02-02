@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-me
+  labels:
+    app: me
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: me
+  template:
+    metadata:
+      labels:
+        app: me
+    spec:
+      containers:
+      - image: kdetony/imgcloud:0.3
+        name: cont-me
+        ports:
+        - containerPort: 8090
+          name: cont-me
+        volumeMounts:
+        - name: data-me
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: data-me
+        persistentVolumeClaim:
+          claimName:  pvc-me
+

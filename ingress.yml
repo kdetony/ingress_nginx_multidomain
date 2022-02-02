@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-apps
+  annotations:
+     kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: "kakaroto.work"
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-kakaroto
+            port:
+             number: 8080   #puerto de la aplicacion
+
+  - host: "tonydev.me"
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-me
+            port:
+             number: 8090
+
