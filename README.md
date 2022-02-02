@@ -7,6 +7,7 @@ Instalamos k0s
 > curl -sSLf https://get.k0s.sh |  sh
 
 > k0s install controller --single
+
 > k0s start
 
 > k0s status
