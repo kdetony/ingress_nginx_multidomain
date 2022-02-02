@@ -1,2 +1,2 @@
-# ingress_nginx_multidomain
+# Nginx como ingress controller con Kubernetes
 Repo nginx nigress controller
