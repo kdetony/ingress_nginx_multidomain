@@ -1,0 +1,14 @@
+Creando certificado local:
+
+openssl req -x509 \
+  -newkey rsa:4096 \
+  -keyout key.pem \
+  -out cert.pem \
+  -days 365 \
+  -nodes \
+  -subj "/C=PE/ST=Lima/L=Peru/O=Ballena Roja/OU=Inc/CN=ballenaroja"
+
+Para convertir:
+cat cert.pem | base64 -w 0
+
+

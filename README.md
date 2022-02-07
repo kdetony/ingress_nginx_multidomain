@@ -1,5 +1,5 @@
 # Nginx como ingress controller con Kubernetes
-Instalacion de Nginx como Ingress Controller en Kubernetes para 2 dominios.
+Repo nginx nigress controller
 
 Instalamos k0s
 ===
@@ -7,7 +7,6 @@ Instalamos k0s
 > curl -sSLf https://get.k0s.sh |  sh
 
 > k0s install controller --single
-
 > k0s start
 
 > k0s status
@@ -37,7 +36,7 @@ git clone https://github.com/kubernetes/ingress-nginx.git
 > Agregamos al archivo deploy.yml  **externalIPs** debajo de **NodePort**
 
 
-**path: ./ingress-nginx/deploy/static/provider/baremetal/deploy.yml**
+**path: ./ingress-nginx/deploy/static/provider/baremetal/deploy.yml **
 
 > externalIPS:
 > - IP_PUBLICA
